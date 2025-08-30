@@ -1,0 +1,1297 @@
+{
+	"info": {
+		"_postman_id": "56d40e5e-e83e-4b05-aa02-6755782c6979",
+		"name": "adhivasiondo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37644716"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Adnan Ega Maulalna",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tgentul@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "axvhfrjb",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Asus/Downloads/Gemini_Generated_Image_4766s14766s14766.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "tgentul@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "axvhfrjb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Adnan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "adnanega82@gmail",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "adnan123",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/PROJECT/kerjaan/techtest_adhivasiondo/app/public/images/profile.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/profile/update",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kelas",
+			"item": [
+				{
+					"name": "Get Kelas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kelas?page=1&per_page=10&search",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kelas"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Kelas by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Adnan Ega Maulalna",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tgentul@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "axvhfrjb",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Asus/Downloads/Gemini_Generated_Image_4766s14766s14766.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kelas/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kelas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Kelas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "MARKETING",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/PROJECT/kerjaan/techtest_adhivasiondo/app/public/images/marketing.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kelas",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kelas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Kelas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "PEMROGRAMAN",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/PROJECT/kerjaan/techtest_adhivasiondo/app/public/images/pemrograman.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kelas/update/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kelas",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Kelas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kelas/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kelas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Modul",
+			"item": [
+				{
+					"name": "Get Modul",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/modul",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"modul"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modul by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/modul/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"modul",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Modul",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_kelas",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "PUBLIC SPEAKING",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/PROJECT/kerjaan/techtest_adhivasiondo/app/public/images/pemrograman.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/modul",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"modul"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update MOdul",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_kelas",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "PUBLIC SPEAKING 2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/PROJECT/kerjaan/techtest_adhivasiondo/app/public/images/pemrograman.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/modul/update/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"modul",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Modul",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/modul/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"modul",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jadwal",
+			"item": [
+				{
+					"name": "Get Jadwal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/jadwal?page=1&per_page=10&search",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jadwal"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jadwal by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/jadwal/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jadwal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Jadwal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Daily Meeting",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "meeting tahap 3",
+									"type": "text"
+								},
+								{
+									"key": "flag_color",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "tanggal",
+									"value": "2025-08-30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/jadwal",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jadwal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Jadwal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Daily Meeting",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "meeting tahap 2",
+									"type": "text"
+								},
+								{
+									"key": "flag_color",
+									"value": "green",
+									"type": "text"
+								},
+								{
+									"key": "tanggal",
+									"value": "2025-08-30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/jadwal/update/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jadwal",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Jadwal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/jadwal/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jadwal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nilai",
+			"item": [
+				{
+					"name": "Get Nilai",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/nilai",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"nilai"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Nilai by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/nilai/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"nilai",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Nilai",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id_kelas",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "id_modul",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "point",
+									"value": "300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/nilai",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"nilai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update NIlai",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id_kelas",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "id_modul",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "point",
+									"value": "400",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/nilai/update/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"nilai",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Nilai",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwiaWF0IjoxNzU2NTIwMDg2LCJleHAiOjE3NTY1NjMyODYsInVpZCI6IjEiLCJlbWFpbCI6InRnZW50dWxAZ21haWwuY29tIn0.9LZT9uDZ3xrI3zJLi8pFY_2fh6fayACubjSywzQtxUc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/nilai/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"nilai",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
